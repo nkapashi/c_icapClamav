@@ -1,4 +1,4 @@
-Dockerfile for building am image of ICAP enabled Antivirus server that is based on c-icap, clamav and Alpine Linux. 
+Dockerfile for building an image of ICAP enabled Antivirus server that is based on c-icap, clamav and Alpine Linux. 
 
 As this is for **testing, researching and demonstration purposes only**, the clamav antivirus database does not contain any valid virus signatures, thus it will not detect any viruses. Again for the same purpose one may want to simulate a file being blocked by the antivirus engine. For that a custom antivirus signature is added that will recognize a particular and well known good file as a virus. That file is putty.exe. So if you want to test/demonstrate a file blocked by ICAP just transfer your putty.exe to the server.
 
