@@ -2,7 +2,7 @@
 
 FROM alpine:latest
 
-LABEL maintainer "nkapashikov@axway.com"
+LABEL maintainer "nkapashi"
 
 ENV cicapBaseVersion="0.5.2" cicapModuleVersion="0.4.5"
 
