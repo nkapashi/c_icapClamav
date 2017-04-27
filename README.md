@@ -21,7 +21,7 @@ As this is for **testing, researching and demonstration purposes only**, the cla
 ```
 docker build -t {imageName} .
 
-Example: docker build icap .
+Example: docker build -t icap .
 ```
 
 Note: the '.' specifies the path to the Dockerfile. Docker and the container will need to have access to the Internet in order to download the needed packages.
