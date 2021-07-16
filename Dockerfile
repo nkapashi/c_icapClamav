@@ -58,5 +58,5 @@ RUN mkdir -p /tmp/install && mkdir -p /opt/c-icap && mkdir -p /var/log/c-icap/ &
 		
 ADD ./etc /opt/c-icap/etc
 ADD ./opt /opt
-COPY custom_vir_sig.ndb /var/lib/clamav/ 
+COPY custom_vir_sig.ndb /var/lib/clamav/
 CMD chmod +x /opt/start.sh; sync && /opt/start.sh && /bin/sh
