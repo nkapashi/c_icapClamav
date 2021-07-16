@@ -53,7 +53,7 @@ RUN mkdir -p /tmp/install && mkdir -p /opt/c-icap && mkdir -p /var/log/c-icap/ &
 		gcc \
 		make \
 		g++ && \
-		rm -rf /opt/c-icap/etc/*.default \
+		rm -rf /opt/c-icap/etc/*.default
 
 # 6. add configuration file and antivrus database file
 		
