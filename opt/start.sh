@@ -3,16 +3,16 @@
 echo "INFO: Starting up CLAMD service. Waiting for up to a minute for the service to start."
 /usr/sbin/clamd &
 sleep 30
-# Now Wait 30 seconds for Clamd to create the socker
+# Now Wait 30 seconds for Clamd to create the socket
 echo "INFO: Going to wait 30 seconds for Clamd to start"
 counter=0
-while [ ! -f /run/clamav/clamd.sock ]
+while [ ! -S /run/clamav/clamd.sock ]
 do
 	sleep 1
-	$counter + 1
-	if [[ counter > 30 ]]; then
-		break
+	counter=$((counter + 1))
+	if [ "$counter" -gt 30 ]; then
 		echo "ERROR: Clamd did not start. Antivirus scanning will not work. Check logs for additional information."
+		break
 	fi
 done
 # Start the icap service	
